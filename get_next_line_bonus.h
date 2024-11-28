@@ -6,7 +6,7 @@
 /*   By: fforte-j <fforte-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:15:49 by fforte-j          #+#    #+#             */
-/*   Updated: 2024/11/28 20:33:02 by fforte-j         ###   ########.fr       */
+/*   Updated: 2024/11/28 20:39:57 by fforte-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlen(const char *s);
 char	*prepare_next_call(char *buffer);
 char	*find_line(char *buffer);
 char	*join_free_swap(char *buffer, char *buf);
-char	*read_fd(int fd, char *read_fd);
+char	*read_fd(int fd, char *read_file);
 char	*get_next_line(int fd);
 
 #endif

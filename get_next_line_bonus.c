@@ -6,7 +6,7 @@
 /*   By: fforte-j <fforte-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:15:23 by fforte-j          #+#    #+#             */
-/*   Updated: 2024/11/28 20:29:48 by fforte-j         ###   ########.fr       */
+/*   Updated: 2024/11/28 20:40:29 by fforte-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,17 +76,17 @@ char	*find_line(char *buffer)
 	return (line);
 }
 
-char	*join_free_swap(char *read_fd, char *buffer)
+char	*join_free_swap(char *read_file, char *buffer)
 {
 	char	*swap_read;
 
-	swap_read = ft_strjoin(read_fd, buffer);
-	free(read_fd);
-	read_fd = NULL;
+	swap_read = ft_strjoin(read_file, buffer);
+	free(read_file);
+	read_file = NULL;
 	return (swap_read);
 }
 
-char	*read_fd(int fd, char *read_fd)
+char	*read_fd(int fd, char *read_file)
 {
 	char	*buffer;
 	int		bytes;
@@ -94,8 +94,8 @@ char	*read_fd(int fd, char *read_fd)
 	buffer = ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 	if (!buffer)
 		return (NULL);
-	if (!read_fd)
-		read_fd = ft_calloc(1, 1);
+	if (!read_file)
+		read_file = ft_calloc(1, 1);
 	bytes = 1;
 	while (bytes > 0)
 	{
@@ -103,16 +103,16 @@ char	*read_fd(int fd, char *read_fd)
 		if (bytes < 0)
 		{
 			free(buffer);
-			free(read_fd);
+			free(read_file);
 			return (NULL);
 		}
 		buffer[bytes] = '\0';
-		read_fd = join_free_swap(read_fd, buffer);
+		read_file = join_free_swap(read_file, buffer);
 		if (ft_strchr(buffer, '\n'))
 			break ;
 	}
 	free(buffer);
-	return (read_fd);
+	return (read_file);
 }
 
 // int	main(void)
