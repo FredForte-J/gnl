@@ -6,7 +6,7 @@
 /*   By: fforte-j <fforte-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:15:49 by fforte-j          #+#    #+#             */
-/*   Updated: 2024/11/28 21:51:34 by fforte-j         ###   ########.fr       */
+/*   Updated: 2024/11/28 21:55:09 by fforte-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1000000
