@@ -6,7 +6,7 @@
 /*   By: fforte-j <fforte-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:15:45 by fforte-j          #+#    #+#             */
-/*   Updated: 2024/11/28 19:15:46 by fforte-j         ###   ########.fr       */
+/*   Updated: 2024/11/28 21:14:18 by fforte-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	*ft_calloc(size_t count, size_t size)
 		count = 1;
 		size = 1;
 	}
-	if (count > (SIZE_MAX / size))
+	if (count > ((size_t)-1 / size))
 		return (NULL);
 	t_size = count * size;
 	alloc = malloc(t_size);
