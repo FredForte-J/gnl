@@ -6,7 +6,7 @@
 /*   By: fforte-j <fforte-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:15:49 by fforte-j          #+#    #+#             */
-/*   Updated: 2024/11/28 21:42:34 by fforte-j         ###   ########.fr       */
+/*   Updated: 2024/12/03 19:19:10 by fforte-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <fcntl.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000000
+#  define BUFFER_SIZE 42
 # endif
 
 # ifndef FD_QTY

@@ -6,7 +6,7 @@
 /*   By: fforte-j <fforte-j@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 19:15:23 by fforte-j          #+#    #+#             */
-/*   Updated: 2024/11/28 20:40:29 by fforte-j         ###   ########.fr       */
+/*   Updated: 2024/12/03 19:25:07 by fforte-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*prepare_next_call(char *read_file)
 		read_file = NULL;
 		return (NULL);
 	}
-	new_buffer = ft_calloc(ft_strlen(read_file) - i +1, sizeof(char));
+	new_buffer = ft_calloc(ft_strlen(read_file) - i + 1, sizeof(char));
 	i++;
 	while (read_file[i])
 		new_buffer[i2++] = read_file[i++];
